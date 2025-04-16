@@ -185,3 +185,52 @@ public class studentM {
 		}
 	}
 	}
+=cd C:\Users\YourName\your-repo-name
+=notepad README.md
+# my git workflow
+=git add README.md
+=git commit -m "C0: Add <h1> tag to README.md
+	
+=echo "Initial content" > notes.txt
+=git add notes.txt
+=git commit -m "C1: Create a new txt file"
+C2 – Modify the .txt file
+=echo "Additional content added." >> notes.txt
+=git add notes.txt
+=git commit -m "C2:Modify txt file"
+=git push origin main
+🔹 b) iss53 branch → C3: Create index.html and update README.md
+=git checkout -b iss53
+C3 – Create index.html and update README.md
+echo "<!DOCTYPE html><html><body><h1>ISS53 Page</h1></body></html>" > index.html
+notepad README.md
+=git add index.html README.md
+=git commit -m "C3: Create index.html and update README.md in iss53 branch"
+=git push -u origin iss53
+🔹 c) hotfix branch → C4: Update txt file
+=git checkout main
+=git checkout -b hotfix
+C4 – Update the notes.txt file
+=echo "Hotfix update to txt file." >> notes.txt
+=git add notes.txt
+=git commit -m "C4: Update txt file in hotfix branch"
+=git push -u origin hotfix
+🔹 d) Merge hotfix into main and delete it
+=git checkout main
+=git merge hotfix
+
+=git branch -d hotfix
+=git push origin --delete hotfix
+=git diff HEAD~2 HEAD~1 notes.txt
+
+=git diff main iss53
+🔹 e) Merge iss53 into main and delete it
+
+=git checkout main 
+=git merge iss53
+
+=git branch -d iss53
+=git push origin --delete iss53
+
+=git push origin main
+
